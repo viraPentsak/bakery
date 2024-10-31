@@ -1,6 +1,9 @@
 function App() {
     return (
-        <h1>App</h1>
+        <div className="container">
+            <h1 className="text-6xl">App</h1>
+        </div>
+
     )
 }
 
