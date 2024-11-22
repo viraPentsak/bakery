@@ -1,0 +1,37 @@
+{
+  "menuLinks": [
+    {
+      "name": "menu",
+      "link": "/menu"
+    },
+    {
+      "name": "reservations",
+      "link": "/reservations"
+    },
+    {
+      "name": "news",
+      "link": "/news"
+    },
+    {
+      "name": "contact",
+      "link": "/contact"
+    }
+  ],
+  "socialLinks": [
+    {
+      "name": "twitter",
+      "link": "https://www.twitter.com/bakery",
+      "icon": "twitter"
+    },
+    {
+      "name": "facebook",
+      "link": "https://www.facebook.com/bakery",
+      "icon": "facebook"
+    },
+    {
+      "name": "instagram",
+      "link": "https://www.instagram.com/bakery",
+      "icon": "instagram"
+    }
+  ]
+}

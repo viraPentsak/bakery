@@ -20,6 +20,7 @@ module.exports = {
                 'spin-slow': 'spin 30s linear infinite'
             },
             backgroundImage: {
+                'hero-home': 'url(/images/hero_banner.jpg)',
                 'banner-menu': 'url(/images/banner-menu.jpg)',
                 'banner-featured': 'url(/images/banner-featured.jpg)',
                 'mountains': 'url(/images/bg-mountains.png)',
