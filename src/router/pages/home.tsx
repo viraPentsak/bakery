@@ -12,7 +12,7 @@ const HomePage: React.FC = () => {
         <Hero className="hero bg-slate-700"
               imgClassName="bg-hero-home"
               contentClassName="bg-slate-700/30 h-dvh max-h-full">
-            <div className="container max-w-screen-xl pt-[--header-height] md:pt-[--header-height-md]">
+            <div className="container max-w-screen-xl pt-[--header-height] md:pt-[--header-height-lg]">
                 <div className="text-white text-center py-10 px-5">
                     <div className="text-6xl xl:text-8xl md:text-7xl pb-5 md:pb-10 xl:pb-14 font-serif font-bold">
                         Pastry with love

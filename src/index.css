@@ -6,5 +6,9 @@
     --icon-color: currentColor;
 
     --header-height: 3.375rem;
-    --header-height-md: 4.375rem;
+    --header-height-lg: 4rem;
+}
+
+body {
+    scrollbar-gutter: stable;
 }

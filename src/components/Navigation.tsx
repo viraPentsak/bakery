@@ -6,7 +6,7 @@ import getIconByName from "../helpers/getIconByName.tsx";
 
 interface NavigationProps extends Omit<LinkProps, "to" | "children"> {
     listClassName?: string;
-    listItemClassName?: string;
+    linkClassName?:string;
     linksFetcher: () => I_GeneralLink[];
     iconClassName?: string;
 }
@@ -15,22 +15,21 @@ const Navigation: React.FC<NavigationProps> = (
     {
         className,
         listClassName,
-        listItemClassName,
+        linkClassName,
         linksFetcher,
         iconClassName,
         ...rest
     }) => {
     const links = linksFetcher();
-
-    const linkClassName = clsx("transition", className, {"text-white hover:text-leather-400": !className});
+    const linkCN = clsx("transition", linkClassName, {"text-white": !linkClassName});
 
     return (
-        <nav>
+        <nav className={className}>
             <ul className={listClassName}>
                 {links.map(link => {
                     const icon = getIconByName(link.icon, iconClassName);
-                    return <li key={link.link} className={listItemClassName}>
-                        <Link className={linkClassName}{...rest} to={link.link}>
+                    return <li key={link.link}>
+                        <Link className={linkCN}{...rest} to={link.link}>
                             {icon}
                             <span>{link.name}</span>
                         </Link>

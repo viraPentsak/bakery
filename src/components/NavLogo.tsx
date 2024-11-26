@@ -1,6 +1,7 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
+import {NavLink, NavLinkRenderProps} from "react-router-dom";
 import Logo from "./Logo";
+import {classNames} from "../helpers";
 
 interface NavLogoProps {
     className?: string;
@@ -11,9 +12,13 @@ interface NavLogoProps {
 }
 
 const NavLogo: React.FC<NavLogoProps> = (props) => {
+    const classNameHandler = (isActive: NavLinkRenderProps) => {
+        return classNames(props.className, isActive ? props.activeClassName : "");
+    }
+
     return (
         <NavLink to={props.href}
-                 className={isActive => isActive ? props.activeClassName : props.className}>
+                 className={classNameHandler}>
             <span className="sr-only">{props.destination}</span>
             <Logo className={props.logoClassName}/>
         </NavLink>
