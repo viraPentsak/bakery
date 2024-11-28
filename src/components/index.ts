@@ -1,4 +1,5 @@
 import Card from "./Card.tsx";
+import Carousel from "./Carousel";
 import Image from "./Image.tsx";
 import Link from "./Link.tsx"
 import Navigation from "./Navigation.tsx";
@@ -9,6 +10,7 @@ import Stamp from "./Stamp.tsx";
 
 export {
     Card,
+    Carousel,
     Image,
     Link,
     Navigation,
