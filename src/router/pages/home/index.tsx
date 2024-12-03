@@ -2,6 +2,7 @@ import React from "react";
 import HomeHero from "./HomeHero.tsx";
 import CakeSection from "./CakeSection.tsx";
 import MenuSection from "./MenuSection.tsx";
+import CurrentDishSection from "./CurrentDishSection.tsx";
 
 const HomePage: React.FC = () => {
     return (
@@ -15,8 +16,12 @@ const HomePage: React.FC = () => {
                     <MenuSection/>
                 </div>
 
-                <div className="h-dvh bg-red-400"></div>
-                <div className="h-dvh bg-red-400"></div>
+                <div className="bg-gray-900 bg-banner-featured bg-no-repeat bg-cover">
+                    <CurrentDishSection/>
+                </div>
+                <div className="h-dvh bg-straw-100">
+
+                </div>
 
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et molestie felis. Integer congue sed
                 ipsum a facilisis. Ut dictum felis vitae dolor pulvinar vulputate. Curabitur in erat lectus. Aliquam

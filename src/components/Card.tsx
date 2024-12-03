@@ -1,7 +1,7 @@
 import React from "react";
 import {classNames} from "../helpers";
 
-interface CardProps {
+export interface CardProps {
     title: string;
     subtitle?: string;
     description?: string;

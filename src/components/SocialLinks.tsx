@@ -1,5 +1,5 @@
 import React from "react";
-import {getSocialLinks} from "../hooks";
+import {getSocialLinks} from "../actions";
 import Navigation from "./Navigation.tsx";
 import {classNames} from "../helpers";
 

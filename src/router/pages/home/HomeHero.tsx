@@ -1,9 +1,8 @@
-import React from "react";
 import {useOutletContext} from "react-router-dom";
 
-import {OutletProps} from "@/components/page/Layout.tsx";
-import {Hero} from "@/components/page";
-import {Link} from "@/components";
+import {OutletProps} from "../../../components/page/Layout";
+import {Hero} from "../../../components/page";
+import {ButtonLink} from "../../../components/";
 
 import DashedLineSvg from "@/assets/svg/dashed_line.svg?react";
 import VignetteOuterSVG from "@/assets/svg/vignette_outer.svg?react";
@@ -11,20 +10,6 @@ import BreadSVG from "@/assets/svg/bread_logo.svg?react";
 
 const HomeHero = () => {
     const {inViewRef}: OutletProps = useOutletContext();
-
-    const menuButton = (
-        <Link to="/menu"
-              className="uppercase
-             font-serif font-bold
-             border border-dashed border-white/50
-             py-4 px-6 md:px-10 xl:px-14
-             bg-gray-600/50
-             transition-colors
-             hover:bg-gray-600/80
-             hover:border-solid">
-            Our Menu
-        </Link>);
-
 
     return (<div ref={inViewRef} className="relative">
         <Hero className="hero bg-slate-700"
@@ -42,7 +27,9 @@ const HomeHero = () => {
                         <p className="text-2xl pb-5 md:pb-10 xl:pb-16">
                             We’re bringing you fresh ingredients
                             every day in ways you can’t resist.</p>
-                        {menuButton}
+                        <ButtonLink to="/menu" type="secondary" className="text-sm	">
+                            Our Menu
+                        </ButtonLink>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-import {Image, Card, Quote, Stamp} from "@/components";
+import {Image, Card, Quote, Stamp} from "./../../../components";
 
 const images: string[] = ["/images/cakes_1.jpg", "/images/cakes_2.jpg", "/images/cakes_3.jpg", "/images/cakes_4.jpg"];
 

@@ -1,20 +1,26 @@
-import Card from "./Card.tsx";
+import ButtonLink from "./ButtonLink";
+import Card from "./Card";
 import Carousel from "./Carousel";
-import Image from "./Image.tsx";
-import Link from "./Link.tsx"
-import Navigation from "./Navigation.tsx";
-import NavLogo from "./NavLogo.tsx";
-import Quote from "./Quote.tsx";
-import SocialLinks from "./SocialLinks.tsx";
-import Stamp from "./Stamp.tsx";
+import DescriptionCard from "./DescriptionCard";
+import Image from "./Image";
+import Link from "./Link"
+import Navigation from "./Navigation";
+import NavLogo from "./NavLogo";
+import Pricing from "./Pricing";
+import Quote from "./Quote";
+import SocialLinks from "./SocialLinks";
+import Stamp from "./Stamp";
 
 export {
+    ButtonLink,
     Card,
     Carousel,
+    DescriptionCard,
     Image,
     Link,
     Navigation,
     NavLogo,
+    Pricing,
     Quote,
     SocialLinks,
     Stamp

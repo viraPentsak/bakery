@@ -1,6 +1,6 @@
 import React from "react";
 import Navigation from "../Navigation.tsx";
-import {getNavLinks} from "../../hooks";
+import {getNavLinks} from "../../actions";
 
 
 

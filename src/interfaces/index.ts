@@ -10,3 +10,9 @@ export interface I_Price {
     currency: Currency;
     amount: number;
 }
+
+export interface I_MenuItem {
+    title: string;
+    description: string;
+    price: I_Price;
+}

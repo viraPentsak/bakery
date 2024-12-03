@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import Navigation from "../Navigation.tsx";
-import {getNavLinks} from "../../hooks";
+import {getNavLinks} from "../../actions";
 import {classNames} from "../../helpers";
 import SocialLinks from "../SocialLinks.tsx";
 import {useLocation} from "react-router-dom";

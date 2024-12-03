@@ -25,7 +25,8 @@ module.exports = {
                 'banner-featured': 'url(/images/banner-featured.jpg)',
                 'mountains': 'url(/images/bg-mountains.png)',
                 'windmill': 'url(/images/bg-windmill.png)',
-                'village': 'url(/images/bg-village.png)'
+                'village': 'url(/images/bg-village.png)',
+                'wheat-left':'url(/images/wheat-left.png)',
             },
             colors: {
                 'straw': {
