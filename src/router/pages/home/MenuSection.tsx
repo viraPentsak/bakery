@@ -1,6 +1,7 @@
 import React from "react";
 import {GoStar, GoStarFill} from "react-icons/go";
-import {Image, Card, Carousel} from "@/components";
+import {Image, Card, Carousel} from "./../../../components";
+import {getFirstReceipt} from "../../../actions/getReceipt.ts";
 
 const MenuTimeCard = () => (
     <div
@@ -19,17 +20,18 @@ const MenuTimeCard = () => (
     </div>
 );
 
-const MenuCarousel = () => {
-    const images = [
-        "/images/cakes_1.jpg",
-        "/images/cakes_2.jpg",
-        "/images/cakes_3.jpg",
-        "/images/cakes_4.jpg"
-    ];
+interface MenuCarouselProps {
+    images: string[];
+}
+
+const MenuCarousel: React.FC<MenuCarouselProps> = ({images}) => {
+
+    if (!images) return null;
+
     return (
         <Carousel options={{align: "start", loop: false}}
                   slideClassName="rounded-full overflow-hidden pb-[100%] sm:pb-[50%] md:pb-[33%] relative sm:basis-1/2 md:basis-1/3"
-                  slides={images.map(imageSrc => {
+                  slides={images.map((imageSrc) => {
                       return <div key={imageSrc}
                                   className="absolute inset-3.5 rounded-full bg-cover"
                                   style={{backgroundImage: `url(${imageSrc})`}}>
@@ -38,6 +40,12 @@ const MenuCarousel = () => {
     )
 }
 const MenuSection = () => {
+    const receipt = getFirstReceipt();
+
+    if (!receipt) return null;
+
+    const {photoMain, photo} = receipt;
+
     return (
         <div className="max-w-screen-xl mx-auto md:flex flex-row justify-center">
             <div
@@ -46,7 +54,7 @@ const MenuSection = () => {
                     <div className="xl:absolute inset-0">
                         <Image alt={"Current menu item"}
                                className="xl:h-full w-full xl:object-cover"
-                               src={"images/menu_image_1.jpg"}/>
+                               src={photoMain}/>
                     </div>
                     <div
                         className="absolute top-0 bottom-0 left-7 pl-0.5 flex flex-col gap-2 text-white justify-center text-xl"
@@ -66,7 +74,7 @@ const MenuSection = () => {
                           subtitle="season favourite"
                           description="Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus.">
                         <div className="pt-20 -mb-4">
-                            <MenuCarousel/>
+                            <MenuCarousel images={photo}/>
                         </div>
                     </Card>
                 </div>

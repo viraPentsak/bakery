@@ -1,0 +1,81 @@
+[
+  {
+    "id": "rcp_1",
+    "title": "Tasty pancakes",
+    "subtitle": "season favourite",
+    "description": "Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus.",
+    "lactoseFree": false,
+    "vegan": false,
+    "glutenFree": false,
+    "time": {
+      "prep": 15000,
+      "cook": 35000
+    },
+    "photoMain": "images/pancakes.jpg",
+    "photo": [
+      "/images/cakes_1.jpg",
+      "/images/cakes_2.jpg",
+      "/images/cakes_3.jpg",
+      "/images/cakes_4.jpg"
+    ],
+    "ingredients": [
+      {
+        "name": "beetroot",
+        "description": "Quot alienum persecuti ut eam, nam ad natqui primis nusquam.",
+        "photo": "/images/ingred_cheese.jpg"
+      },
+      {
+        "name": "meat",
+        "description": "Nullam dictum felis eu pede mollis pretium Integer tincidunt.",
+        "photo": "/images/ingred_eggs.jpg"
+      },
+      {
+        "name": "potatoes",
+        "description": "Quot alienum persecuti ut eam, nam ad natqui primis nusquam.",
+        "photo": "/images/ingred_wheat.jpg"
+      },
+      {
+        "name": "cabbage",
+        "description": "Nullam dictum felis eu pede mollis pretium Integer tincidunt.",
+        "photo": "/images/cakes_1.jpg"
+      }
+    ]
+  },
+  {
+    "id": "rcp_2",
+    "title": "A Bowl of Borsch",
+    "subtitle": "Best soup you've ever tasted!",
+    "description": "Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus.",
+    "lactoseFree": false,
+    "vegan": false,
+    "glutenFree": true,
+    "time": {
+      "prep": 15000,
+      "cook": 35000
+    },
+    "photoMain": "/images/sandwich.jpg",
+    "photo": [],
+    "ingredients": [
+      {
+        "name": "beetroot",
+        "description": "Quot alienum persecuti ut eam, nam ad natqui primis nusquam.",
+        "photo": "/images/ingred_cheese.jpg"
+      },
+      {
+        "name": "meat",
+        "description": "Nullam dictum felis eu pede mollis pretium Integer tincidunt.",
+        "photo": "/images/ingred_eggs.jpg"
+      },
+      {
+        "name": "potatoes",
+        "description": "Quot alienum persecuti ut eam, nam ad natqui primis nusquam.",
+        "photo": "/images/ingred_wheat.jpg"
+      },
+      {
+        "name": "cabbage",
+        "description": "Nullam dictum felis eu pede mollis pretium Integer tincidunt.",
+        "photo": "/images/cakes_1.jpg"
+      }
+    ]
+  }
+]
