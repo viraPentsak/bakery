@@ -7,6 +7,7 @@ import Link from "./Link"
 import Navigation from "./Navigation";
 import NavLogo from "./NavLogo";
 import Pricing from "./Pricing";
+import Receipt from "./Receipt";
 import Quote from "./Quote";
 import SocialLinks from "./SocialLinks";
 import Stamp from "./Stamp";
@@ -21,6 +22,7 @@ export {
     Navigation,
     NavLogo,
     Pricing,
+    Receipt,
     Quote,
     SocialLinks,
     Stamp

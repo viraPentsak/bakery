@@ -6,7 +6,7 @@ export interface I_GeneralLink {
 
 export type Currency = { code: "USD", symbol: "$" } | { code: "UAH", symbol: "₴" };
 
-interface HasID{
+interface HasID {
     id: string;
 }
 
@@ -21,13 +21,13 @@ export interface I_MenuItem {
     price: I_Price;
 }
 
-export interface I_Ingredient{
+export interface I_Ingredient {
     name: string;
     description: string;
     photo?: string;
 }
 
-export interface I_Receipt extends HasID{
+export interface I_Receipt extends HasID {
     title: string;
     subtitle?: string;
     description: string;
@@ -42,5 +42,5 @@ export interface I_Receipt extends HasID{
     };
     photoMain?: string;
     photo: string[] | [];
-
+    link: string;
 }
