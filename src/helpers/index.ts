@@ -1,9 +1,11 @@
 import classNames from "./classNames.ts";
-import getIconByName from "./getIconByName.tsx";
 import formatLocalePrice from "./formatLocalePrice.ts";
+import formatTime from "./formatTime.ts";
+import getIconByName from "./getIconByName.tsx";
 
 export {
     classNames,
-    getIconByName,
-    formatLocalePrice
+    formatLocalePrice,
+    formatTime,
+    getIconByName
 };

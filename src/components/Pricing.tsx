@@ -12,7 +12,7 @@ const Pricing: React.FC<PricingProps> = (
     {title, description, price}) => {
     return (
         <div className="">
-            <div className="text-3xl font-serif font-bold leading-none pb-2.5">
+            <div className="text-3xl/none font-serif font-bold pb-2.5">
                 {title}
             </div>
             <div className="opacity-80 pb-3">

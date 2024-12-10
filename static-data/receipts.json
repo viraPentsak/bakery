@@ -8,9 +8,10 @@
     "vegan": false,
     "glutenFree": false,
     "time": {
-      "prep": 15000,
-      "cook": 35000
+      "prep": 30000,
+      "cook": 1000000
     },
+    "link": "/rcp_1",
     "photoMain": "images/pancakes.jpg",
     "photo": [
       "/images/cakes_1.jpg",
@@ -45,14 +46,15 @@
     "id": "rcp_2",
     "title": "A Bowl of Borsch",
     "subtitle": "Best soup you've ever tasted!",
-    "description": "Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus.",
+    "description": "Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus. ",
     "lactoseFree": false,
     "vegan": false,
     "glutenFree": true,
     "time": {
-      "prep": 15000,
-      "cook": 35000
+      "prep": 850000,
+      "cook": 1300000
     },
+    "link": "/rcp_2",
     "photoMain": "/images/sandwich.jpg",
     "photo": [],
     "ingredients": [

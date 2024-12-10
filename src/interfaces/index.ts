@@ -42,5 +42,4 @@ export interface I_Receipt extends HasID {
     };
     photoMain?: string;
     photo: string[] | [];
-    link: string;
 }

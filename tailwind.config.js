@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 import defaultTheme from "tailwindcss/defaultTheme";
 
+const containerScreens = {...defaultTheme.screens};
+delete containerScreens["2xl"];
+
 module.exports = {
     content: [
         "./src/index.html",
@@ -84,7 +87,7 @@ module.exports = {
                 },
             }
         },
-        container: {center: true},
+        container: {center: true, screens: containerScreens},
     },
     plugins: [],
 }

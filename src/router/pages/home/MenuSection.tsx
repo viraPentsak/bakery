@@ -1,9 +1,10 @@
 import React from "react";
 import {GoStar, GoStarFill} from "react-icons/go";
 import {Image, Card, Carousel} from "./../../../components";
-import {getFirstReceipt} from "../../../actions/getReceipt.ts";
+import {getFirstReceipt} from "../../../actions";
+import {formatTime} from "../../../helpers";
 
-const MenuTimeCard = () => (
+const MenuTimeCard: React.FC<{ children?: React.ReactNode }> = ({children}) => (
     <div
         className="
         sm:absolute right-0 top-0
@@ -14,9 +15,7 @@ const MenuTimeCard = () => (
         sm:max-w-[200px]
         shadow-2xl
         ">
-        <span className="text-lg/none uppercase">Ready in </span>
-        <span className="text-8xl/none text-straw-300">40</span>
-        <span className="text-lg/none">min</span>
+        {children}
     </div>
 );
 
@@ -44,7 +43,8 @@ const MenuSection = () => {
 
     if (!receipt) return null;
 
-    const {photoMain, photo} = receipt;
+    const {photoMain, photo, time} = receipt;
+    const readyTime = formatTime(time.prep + time.cook);
 
     return (
         <div className="max-w-screen-xl mx-auto md:flex flex-row justify-center">
@@ -67,7 +67,12 @@ const MenuSection = () => {
                     </div>
                 </div>
 
-                <MenuTimeCard/>
+                <MenuTimeCard>
+                    <span className="text-lg/none uppercase">Ready in </span>
+                    <span className="text-8xl/none text-straw-300">{readyTime}</span>
+                    <span className="text-lg/none">min</span>
+                </MenuTimeCard>
+
                 <div className="bg-white bg-windmill bg-no-repeat bg-right-bottom p-6 lg:p-10 2xl:px-12 basis-3/5">
                     <div className="sr-only">Rating: 4 out of 5</div>
                     <Card title="Tasty pancakes"

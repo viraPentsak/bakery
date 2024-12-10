@@ -17,14 +17,14 @@ const HomeHero = () => {
               contentClassName="bg-slate-700/30 h-dvh max-h-full">
             <div className="container max-w-screen-xl pt-[--header-height] md:pt-[--header-height-lg]">
                 <div className="text-white text-center py-10 px-5">
-                    <div className="text-6xl xl:text-8xl md:text-7xl pb-5 md:pb-10 xl:pb-14 font-serif font-bold">
+                    <div className="text-6xl xl:text-8xl md:text-7xl pb-5 md:pb-10 xl:pb-14 font-serif font-bold text-shadow">
                         Pastry with love
                     </div>
                     <div className="pb-5 md:pb-10 xl:pb-14">
                         <DashedLineSvg className="m-auto w-[193px] h-[15px]"/>
                     </div>
                     <div className="md:w-3/4 xl:w-2/4 mx-auto">
-                        <p className="text-2xl pb-5 md:pb-10 xl:pb-16">
+                        <p className="text-2xl pb-5 md:pb-10 xl:pb-16 text-shadow">
                             We’re bringing you fresh ingredients
                             every day in ways you can’t resist.</p>
                         <ButtonLink to="/menu" type="secondary" className="text-sm	">

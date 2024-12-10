@@ -11,8 +11,7 @@ const HeaderNav: React.FC = () => {
     const linkClassName: string = [
         "after:border-t-2 after:block after:w-0 after:mx-auto hover:after:w-full after:transition-[width] leading-none after:border-white",
         "font-serif font-bold",
-        "uppercase text-sm ",
-        "leading-none",
+        "uppercase text-sm/none ",
         "block p-5 md:p-6",
         "text-center",
         "text-white"
