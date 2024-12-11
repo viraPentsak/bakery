@@ -5,23 +5,47 @@ on:
     branches: ["main"]
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
 jobs:
-  build:
-    runs-on: ubunta-latest
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
     steps:
       - name: Checkout 📘
         uses: actions/checkout@v4
         
-      - name: Use Node.js ${{matrix.node_version}}
+      - name: Setup Node.js ${{matrix.node_version}}
         uses: actions/setup-node@v4
-        
-      - name: Install dependencies & build 🔨
-        run: |
-          npm install 
-          npm run build
-          
-      - name: Publish 🎆
-        uses: actions/deploy-pages@v4
         with:
-          path: dist
-      
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: |
+          npm ci
+
+      - name: Build 🔨
+        run: npm run build
+
+      - name: Setup pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          path: './dist'
+
+      - name: Deploy 🎆
+        id: deployment
+        uses: actions/deploy-pages@v4
+
