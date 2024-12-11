@@ -1,6 +1,6 @@
 import React from "react";
-import {I_Price} from "@/interfaces";
-import {formatLocalePrice} from "@/helpers";
+import {I_Price} from "../interfaces";
+import {formatLocalePrice} from "../helpers";
 
 interface PricingProps {
     title: string;

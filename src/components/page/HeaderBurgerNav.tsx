@@ -48,8 +48,8 @@ const HeaderBurgerNav: React.FC = () => {
 
     const wrapperClassName: string = `fixed inset-0 top-[--header-height] lg:top-[--header-height-lg] w-full bg-white text-center duration-300 transition ${menuOpen ? "translate-y-0" : "translate-y-full"}`;
 
-    const linksFetcher = ():I_GeneralLink[] => {
-        const links = getNavLinks();
+    const linksFetcher = async ():Promise<I_GeneralLink[]> => {
+        const links = await getNavLinks();
 
         if(pathname === "/") return links;
 
