@@ -18,7 +18,7 @@ const Layout: React.FC = () => {
             <div className="main min-h-screen">
                 <Outlet context={{inViewRef: ref}}/>
             </div>
-            <Footer/>
+            <Footer className="bg-straw-100"/>
         </div>
     );
 };

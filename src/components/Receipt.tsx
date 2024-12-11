@@ -33,7 +33,7 @@ const Receipt: React.FC<ReceiptProps> = ({data}) => {
 
     const ingredients = data.ingredients.slice(0, 3);
 
-    const [showReceipt, setShowReceipt] = useState<boolean>(true);
+    const [showReceipt, setShowReceipt] = useState<boolean>(false);
 
     const clickHandler: React.MouseEventHandler<HTMLButtonElement> = () => {
         setShowReceipt(mode => !mode);

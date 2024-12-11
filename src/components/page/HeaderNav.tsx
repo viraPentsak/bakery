@@ -5,7 +5,7 @@ import {getNavLinks} from "../../actions";
 
 
 const HeaderNav: React.FC = () => {
-    const activeClassName = "border border-white bg-white/20 ";
+    const activeClassName = "after:w-full";
     const listClassName: string = "flex flex-row justify-between leading-4";
 
     const linkClassName: string = [
