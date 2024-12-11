@@ -1,9 +1,9 @@
 import {I_GeneralLink} from "../interfaces";
 import {menuLinks} from "./../../metadata.json";
 
-const getNavLinks = (): I_GeneralLink[] => {
+const getNavLinks = async (): Promise<I_GeneralLink[]> => {
 
-    return menuLinks;
+    return Promise.resolve(menuLinks);
 }
 
 export default getNavLinks;
