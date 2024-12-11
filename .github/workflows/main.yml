@@ -1,0 +1,27 @@
+name: Build and Release
+
+on: 
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubunta-latest
+    steps:
+      - name: Checkout 📘
+        uses: actions/checkout@v4
+        
+      - name: Use Node.js ${{matrix.node_version}}
+        uses: actions/setup-node@v4
+        
+      - name: Install dependencies & build 🔨
+        run: |
+          npm install 
+          npm run build
+          
+      - name: Publish 🎆
+        uses: actions/deploy-pages@v4
+        with:
+          path: dist
+      
