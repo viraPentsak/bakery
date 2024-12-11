@@ -4,6 +4,8 @@ import {Image, Card, Carousel} from "./../../../components";
 import {getFirstReceipt} from "../../../actions";
 import {formatTime} from "../../../helpers";
 
+const ASSET_URL = process.env.ASSET_URL || "";
+
 const MenuTimeCard: React.FC<{ children?: React.ReactNode }> = ({children}) => (
     <div
         className="
@@ -33,7 +35,7 @@ const MenuCarousel: React.FC<MenuCarouselProps> = ({images}) => {
                   slides={images.map((imageSrc) => {
                       return <div key={imageSrc}
                                   className="absolute inset-3.5 rounded-full bg-cover"
-                                  style={{backgroundImage: `url(${imageSrc})`}}>
+                                  style={{backgroundImage: `${ASSET_URL}url(${imageSrc})`}}>
                       </div>
                   })}/>
     )
@@ -54,7 +56,7 @@ const MenuSection = () => {
                     <div className="xl:absolute inset-0">
                         <Image alt={"Current menu item"}
                                className="xl:h-full w-full xl:object-cover"
-                               src={photoMain}/>
+                               src={ASSET_URL + photoMain}/>
                     </div>
                     <div
                         className="absolute top-0 bottom-0 left-7 pl-0.5 flex flex-col gap-2 text-white justify-center text-xl"

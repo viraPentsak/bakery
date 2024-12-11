@@ -3,7 +3,7 @@ import {I_Receipt} from "../interfaces";
 import Image from "./Image.tsx";
 import Card from "./Card.tsx";
 import {classNames, formatTime} from "../helpers";
-
+const ASSET_URL = process.env.ASSET_URL || "";
 
 interface ReceiptProps {
     data: I_Receipt;
@@ -94,7 +94,7 @@ const Receipt: React.FC<ReceiptProps> = ({data}) => {
                             className={`pt-4 text-center row-span-1 md:col-span-4 xl:col-span-3 xl:col-start-1 xl:row-start-${index + 1}`}>
                     <div
                         className="block mx-auto mb-6 overflow-hidden rounded-full w-36 h-36 md:w-24 md:h-24 bg-no-repeat bg-center bg-cover shadow "
-                        style={{backgroundImage: `url(${item.photo})`}}></div>
+                        style={{backgroundImage: `url(${ASSET_URL}${item.photo})`}}></div>
                     <div className="text-3xl/none font-serif text-leather-400 font-bold pb-6">
                         {item.name}
                     </div>
