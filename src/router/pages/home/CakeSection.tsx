@@ -1,7 +1,8 @@
 import {Image, Card, Quote, Stamp} from "./../../../components";
 
 const images: string[] = ["/images/cakes_1.jpg", "/images/cakes_2.jpg", "/images/cakes_3.jpg", "/images/cakes_4.jpg"];
-const ASSET_URL = process.env.ASSET_URL || "";
+
+import {getAssetPath} from "../../../helpers";
 
 const CakeSection = () => {
     return (
@@ -18,7 +19,7 @@ const CakeSection = () => {
                             className="md:flex md:flex-row content-center gap-5 md:pt-11">
                             <div className="border-t border-b border-stone-300 my-4 p-2.5 basis-20 grow">Anita</div>
                             <Image className=" w-24 h-24 rounded-full overflow-hidden mx-auto grow-0"
-                                   src={ASSET_URL + "images/chief_avatar.jpg"} alt={"Anita the chief avatar"}/>
+                                   src={getAssetPath("images/chief_avatar.jpg")} alt={"Anita the chief avatar"}/>
                             <div className="border-t border-b border-stone-300 my-4 p-2.5 basis-20 grow">Black-Blake
                             </div>
                         </div>
@@ -32,12 +33,17 @@ const CakeSection = () => {
             <div className="col-span-full xl:col-span-3">
                 <div className="relative">
                     <div className="grid grid-cols-4 gap-4 py-4 relative">
-                        {images.map(imageURL => (
-                            <div key={imageURL}
-                                 className="col-span-full sm:col-span-2 lg:col-span-1 xl:sm:col-span-2  relative after:absolute after:border-4 after:inset-2 after:border-white shadow shadow-slate-500">
-                                <Image src={ASSET_URL + imageURL} className="block w-full aspect-[295/250]" alt="image of a cake"/>
-                            </div>
-                        ))}
+                        {images.map(imageURL => {
+                            console.log(imageURL)
+                            console.log(getAssetPath(imageURL))
+                            return (
+                                <div key={imageURL}
+                                     className="col-span-full sm:col-span-2 lg:col-span-1 xl:sm:col-span-2  relative after:absolute after:border-4 after:inset-2 after:border-white shadow shadow-slate-500">
+                                    <Image src={getAssetPath(imageURL)} className="block w-full aspect-[295/250]"
+                                           alt="image of a cake"/>
+                                </div>
+                            )
+                        })}
                     </div>
                     <div className="absolute inset-0 lg:hidden xl:block">
                         <Stamp>

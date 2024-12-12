@@ -2,9 +2,8 @@ import React from "react";
 import {GoStar, GoStarFill} from "react-icons/go";
 import {Image, Card, Carousel} from "./../../../components";
 import {getFirstReceipt} from "../../../actions";
-import {formatTime} from "../../../helpers";
-
-const ASSET_URL = process.env.ASSET_URL || "";
+import {formatTime, getAssetPath} from "../../../helpers";
+import {ASSET_URL} from "../../../constants.ts";
 
 const MenuTimeCard: React.FC<{ children?: React.ReactNode }> = ({children}) => (
     <div
@@ -31,11 +30,11 @@ const MenuCarousel: React.FC<MenuCarouselProps> = ({images}) => {
 
     return (
         <Carousel options={{align: "start", loop: false}}
-                  slideClassName="rounded-full overflow-hidden pb-[100%] sm:pb-[50%] md:pb-[33%] relative sm:basis-1/2 md:basis-1/3"
+                  slideClassName="rounded-full overflow-hidden sm:basis-1/2 md:basis-1/3"
                   slides={images.map((imageSrc) => {
                       return <div key={imageSrc}
-                                  className="absolute inset-3.5 rounded-full bg-cover"
-                                  style={{backgroundImage: `${ASSET_URL}url(${imageSrc})`}}>
+                                  className="rounded-full bg-cover aspect-square sm:aspect-[1/3]]"
+                                  style={{backgroundImage: `url(${getAssetPath(imageSrc)})`}}>
                       </div>
                   })}/>
     )

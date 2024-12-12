@@ -2,8 +2,7 @@ import React, {useState} from "react";
 import {I_Receipt} from "../interfaces";
 import Image from "./Image.tsx";
 import Card from "./Card.tsx";
-import {classNames, formatTime} from "../helpers";
-const ASSET_URL = process.env.ASSET_URL || "";
+import {classNames, formatTime, getAssetPath} from "../helpers";
 
 interface ReceiptProps {
     data: I_Receipt;
@@ -71,7 +70,7 @@ const Receipt: React.FC<ReceiptProps> = ({data}) => {
             <div className="md:col-span-full xl:col-span-9 xl:col-start-4 xl:row-start-1 row-span-3 pt-10 xl:pt-20">
                 <Card className="bg-white relative max-w-[840px] mx-auto xl:mr-0 mb-6 p-2.5">
                     <div className="relative aspect-[820/536] w-full">
-                        <Image src={photoMain} alt="image of a cake"/>
+                        <Image src={ getAssetPath(photoMain)} alt="image of a cake"/>
                         {showReceipt && (<div className="absolute inset-0 md:right-[212px] bg-white/80 p-4">
                             {/*TODO: Display sanitized content*/}
                             {description}
@@ -94,7 +93,7 @@ const Receipt: React.FC<ReceiptProps> = ({data}) => {
                             className={`pt-4 text-center row-span-1 md:col-span-4 xl:col-span-3 xl:col-start-1 xl:row-start-${index + 1}`}>
                     <div
                         className="block mx-auto mb-6 overflow-hidden rounded-full w-36 h-36 md:w-24 md:h-24 bg-no-repeat bg-center bg-cover shadow "
-                        style={{backgroundImage: `url(${ASSET_URL}${item.photo})`}}></div>
+                        style={{backgroundImage: `url(${getAssetPath(item.photo)})`}}></div>
                     <div className="text-3xl/none font-serif text-leather-400 font-bold pb-6">
                         {item.name}
                     </div>
