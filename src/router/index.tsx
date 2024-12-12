@@ -5,6 +5,7 @@ import {
     MenuPage,
     Page404
 } from "./pages";
+import {BASE_URL} from "../constants.ts";
 
 export default createBrowserRouter([
     {
@@ -22,4 +23,7 @@ export default createBrowserRouter([
 
         ]
     }
-]);
+],
+    {
+        basename: BASE_URL
+    });
