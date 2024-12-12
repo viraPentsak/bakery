@@ -1,6 +1,7 @@
 {
   "name": "bakery",
   "private": true,
+  "homepage": "https://virapentsak.github.io/bakery/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
